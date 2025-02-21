@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Donation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #74b49b, #acdbdf);
+            margin: 0;
+            padding: 0;
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center p-6">
+    <nav class="w-full bg-gray-800 text-white p-4 text-center shadow-lg">
+        <a href="/" class="mx-4 hover:text-green-300">Home</a>
+        <a href="/donate" class="mx-4 hover:text-green-300">Donate</a>
+        <a href="/about" class="mx-4 hover:text-green-300">About</a>
+        <a href="/contact" class="mx-4 hover:text-green-300">Contact</a>
+        <a href="/restaurants" class="mx-4 hover:text-green-300">Restaurants</a>
+        <a href="/ngos" class="mx-4 hover:text-green-300">NGOs</a>
+    </nav>
+    
+    <div class="hero w-full h-64 flex flex-col justify-center items-center text-white text-center" style="background: url('https://source.unsplash.com/1600x900/?food,help') center/cover no-repeat;">
+        <h1 class="text-5xl font-bold">🍽 Donate Food</h1>
+        <p class="text-xl mt-2">Help us reduce food waste and feed those in need</p>
+    </div>
+    
+    <div class="bg-white shadow-lg rounded-xl p-8 mt-8 w-full max-w-2xl">
+        <h2 class="text-3xl font-semibold text-green-600 text-center mb-6">Donate Now</h2>
+        <form class="space-y-4">
+            <input type="text" placeholder="Full Name" class="w-full p-3 border rounded-lg">
+            <input type="email" placeholder="Email" class="w-full p-3 border rounded-lg">
+            <input type="tel" placeholder="Phone Number" class="w-full p-3 border rounded-lg">
+            <select class="w-full p-3 border rounded-lg">
+                <option value="">Select Type of Food</option>
+                <option value="canned">Canned Goods</option>
+                <option value="fresh">Fresh Produce</option>
+                <option value="dry">Dry Goods</option>
+                <option value="baked">Baked Goods</option>
+                <option value="other">Other</option>
+            </select>
+            <input type="text" placeholder="Quantity (e.g., 5 boxes, 10 lbs)" class="w-full p-3 border rounded-lg">
+            <input type="datetime-local" class="w-full p-3 border rounded-lg">
+            <textarea placeholder="Additional Message (Optional)" rows="4" class="w-full p-3 border rounded-lg"></textarea>
+            <button type="submit" class="w-full bg-green-600 text-white p-3 rounded-lg hover:bg-green-700 transition">Donate Food</button>
+        </form>
+    </div>
+    
+    <footer class="w-full text-center mt-10 p-6 bg-gray-800 text-white">
+        &copy; <span id="year"></span> Food Connect. All rights reserved.
+    </footer>
+    
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
