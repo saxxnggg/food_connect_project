@@ -49,39 +49,45 @@
     </style>
 </head>
 <body class="min-h-screen flex flex-col items-center p-6">
-    <nav>
-        <a href="/">Home</a> &nbsp; &nbsp; &nbsp; &nbsp;
-        <a href="/donate">Donate</a> &nbsp; &nbsp; &nbsp; &nbsp;
-        <a href="/about">About</a> &nbsp; &nbsp; &nbsp; &nbsp;
-        <a href="/contact">Contact</a> &nbsp; &nbsp; &nbsp; &nbsp;
-        <a href="/restaurants">Restaurants</a> &nbsp; &nbsp; &nbsp; &nbsp;
-        <a href="/ngos">NGOs</a>
-    </nav>
-    
+
+    <!-- Navigation Bar -->
+    <div class="w-full bg-green-800 text-white text-center p-4">
+        <nav class="flex justify-center space-x-6">
+            <a href="/" class="hover:text-gray-300">Home</a>
+            <a href="/donate" class="hover:text-gray-300">Donate</a>
+            <a href="/about" class="hover:text-gray-300">About</a>
+            <a href="/contact" class="hover:text-gray-300">Contact</a>
+            <a href="/restaurants" class="hover:text-gray-300">Restaurants</a>
+            <a href="/ngos" class="hover:text-gray-300">NGOs</a>
+        </nav>
+    </div>
+
+    <!-- Hero Section -->
     <div class="hero">
         <h1 class="text-6xl font-bold">🍽️ Food Connect</h1>
         <br>
         <p class="text-2xl mt-4">Connecting Restaurants and NGOs to Reduce Food Wastage</p>
         <br>
-        <!-- Updated "Get Involved" button to link to the restaurant page -->
-        <a href="http://127.0.0.1:5000/restaurants" class="mt-6 inline-block bg-white text-green-600 px-6 py-2 rounded-lg hover:bg-gray-200 shadow-lg transition-transform transform hover:scale-105">Get Involved</a>
+        <a href="/restaurants" class="mt-6 inline-block bg-white text-green-600 px-6 py-2 rounded-lg hover:bg-gray-200 shadow-lg transition-transform transform hover:scale-105">Get Involved</a>
     </div>
-    
+
+    <!-- Features Section -->
     <section id="features" class="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl mt-10 fade-in-section">
         <div class="card bg-white p-8 rounded-2xl shadow-lg text-center">
-            <h2 class="text-3xl font-semibold text-green-600 mb-4">🍛 <a href="http://127.0.0.1:5000/donate">Donate Food</a></h2>
+            <h2 class="text-3xl font-semibold text-green-600 mb-4">🍛 <a href="/donate">Donate Food</a></h2>
             <p>Restaurants can easily donate surplus food to NGOs in need.</p>
         </div>
         <div class="card bg-white p-8 rounded-2xl shadow-lg text-center">
-            <h2 class="text-3xl font-semibold text-green-600 mb-4">🚚 <a href="http://127.0.0.1:5000/donate">Easy Pickup</a></h2>
+            <h2 class="text-3xl font-semibold text-green-600 mb-4">🚚 <a href="/donate">Easy Pickup</a></h2>
             <p>NGOs schedule food pickups and distribute to the needy.</p>
         </div>
         <div class="card bg-white p-8 rounded-2xl shadow-lg text-center">
-            <h2 class="text-3xl font-semibold text-green-600 mb-4">🌍 <a href="http://127.0.0.1:5000/donate">Reduce Waste</a></h2>
+            <h2 class="text-3xl font-semibold text-green-600 mb-4">🌍 <a href="/donate">Reduce Waste</a></h2>
             <p>Join the mission to minimize food waste and help communities.</p>
         </div>
     </section>
-    
+
+    <!-- JavaScript for Fade-In Effect -->
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const sections = document.querySelectorAll(".fade-in-section");
@@ -100,5 +106,6 @@
             });
         });
     </script>
+
 </body>
 </html>
